@@ -87,7 +87,7 @@ const gameController = (function () {
       let counter = 0;
       for (let j = 0; j < 3; j++) {
         let position = winOptions[i][j];
-        console.log(position);
+  
         if (board[position] === marker) {
           counter++;
         }
@@ -160,8 +160,9 @@ const DOMController = (function () {
     const position = event.target.getAttribute("dataCell");
     const activePlayer = gameController.getActivePlayer();
     const inactivePlayer = gameController.getInactivePlayer();
-    turnMessage(true, inactivePlayer);
     if (!gameBoard.placeMarker(position, activePlayer.marker)) return;
+    
+    turnMessage(true, inactivePlayer);
 
     event.target.textContent = activePlayer.marker;
 
@@ -183,10 +184,6 @@ const DOMController = (function () {
       resultMessage("Draw!");
     }
     gameController.changePlayerTurn();
-
-    console.log(event.target.getAttribute("dataCell"));
-    console.log(gameController.getPlayers());
-    console.log(gameBoard.getBoard());
   }
 
   function playAgain(){
