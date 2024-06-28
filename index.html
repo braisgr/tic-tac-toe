@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tic Tac Toe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playwrite+ES:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
+  <h1>Tic Tac Toe</h1>
+  <div class="player-selection">
+    <div class="player-inputs">
+      <div class="player-field">
+        <label for="player-one">PLAYER 1</label>
+        <input type="text" id="player-one">
+      </div>
+      <div class="player-field">
+        <label for="player-two">PLAYER 2</label>
+        <input type="text" id="player-two">
+      </div>
+    </div>
+    <button id="start-button">Start game</button>
+  </div>
+  <div class="board hide">
+    <div dataCell=0></div>
+    <div dataCell=1></div>
+    <div dataCell=2></div>
+    <div dataCell=3></div>
+    <div dataCell=4></div>
+    <div dataCell=5></div>
+    <div dataCell=6></div>
+    <div dataCell=7></div>
+    <div dataCell=8></div>
+  </div>
+  <dialog class="modal">
+    <div>
+      <h2 class="result-display"></h2>
+      <p class="scores-display">R</p>
+      <div class="modal-buttons">
+        <button class="modal-button" id="play-again">Play Again</button>
+        <button class="modal-button" id="new-game">Exit</button>
+      </div>
+    </div>
+  </dialog>
+  <div class="turn-message"></div>
+
   <script src="script.js"></script>
 </body>
+
 </html>
